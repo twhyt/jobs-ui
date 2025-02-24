@@ -1,36 +1,58 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Job Solution UI Framework Theme
 
-## Getting Started
+## 📌 Overview
+Job Solution UI Framework Theme เป็นชุด UI ที่ออกแบบมาเพื่อให้การพัฒนาเว็บของระบบ Job-Solution
 
-First, run the development server:
+## ✨ Features
+- 🎨 **Customizable Themes** – ปรับแต่งสี ฟอนต์ และองค์ประกอบต่าง ๆ ได้อย่างง่ายดาย
+- 📱 **Responsive Design** – รองรับทุกขนาดหน้าจอ
+- ⚡ **Optimized Performance** – โหลดเร็ว ใช้งานลื่นไหล
+- 🛠 **Component-Based** – มี UI Components พร้อมใช้ เช่น Buttons, Cards, Modals, และอื่น ๆ
+- 🌙 **Dark Mode Support** – รองรับโหมดมืด
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 📦 Installation
+```sh
+npm install jobsolution-ui
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+หรือถ้าใช้ Yarn:
+```sh
+yarn add jobsolution-ui
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🚀 Usage
+```tsx
+import { Button } from 'jobsolution-ui';
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+function App() {
+  return <Button>Click Me</Button>;
+}
+```
 
-## Learn More
+## 🔗 Examples
+สามารถดูตัวอย่างและเอกสารเพิ่มเติมได้ที่ [Documentation](https://example.com/docs)
 
-To learn more about Next.js, take a look at the following resources:
+## 💡 Customization
+สามารถปรับแต่งธีมโดยใช้ไฟล์ CSS Variables หรือ Theme Provider ได้
+```tsx
+import { ThemeProvider } from 'jobsolution-ui';
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+<ThemeProvider theme={{ primaryColor: '#ff5733' }}>
+  <App />
+</ThemeProvider>
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📄 License
+```txt
+MIT License
+```
 
-## Deploy on Vercel
+---
+หากต้องการดูตัวอย่าง UI Framework อื่น ๆ สามารถศึกษาได้จาก:
+```txt
+- Material-UI: https://mui.com/
+- Tailwind CSS: https://tailwindcss.com/
+- Chakra UI: https://chakra-ui.com/
+- Ant Design: https://ant.design/
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

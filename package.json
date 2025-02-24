@@ -1,38 +1,46 @@
 {
   "name": "jobsolution-ui",
-  "version": "0.1.0",
-  "private": true,
+  "version": "0.1.2",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "private": false,
   "scripts": {
     "dev": "next dev",
+    "dev-https": "next dev --experimental-https",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "pre-build": "tsup"
+  },
+  "peerDependencies": {
+    "antd": "^5.0.0",
+    "react": "^17.0.0 || ^18.0.0",
+    "react-dom": "^17.0.0 || ^18.0.0"
   },
   "dependencies": {
+    "@ant-design/nextjs-registry": "^1.0.2",
+    "antd": "^5.24.1",
     "next": "14.2.23",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "styled-components": "^6.1.15"
   },
   "devDependencies": {
-    "@chromatic-com/storybook": "^3.2.4",
-    "@storybook/addon-essentials": "^8.5.8",
-    "@storybook/addon-interactions": "^8.5.8",
-    "@storybook/addon-onboarding": "^8.5.8",
-    "@storybook/blocks": "^8.5.8",
-    "@storybook/nextjs": "^8.5.8",
-    "@storybook/react": "^8.5.8",
-    "@storybook/test": "^8.5.8",
+    "@heroui/react": "^2.7.2",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "eslint": "^8",
     "eslint-config-next": "14.2.23",
-    "eslint-plugin-storybook": "^0.11.3",
+    "framer-motion": "^12.4.7",
     "postcss": "^8",
     "storybook": "^8.5.8",
     "tailwindcss": "^3.4.1",
+    "tsup": "^8.3.6",
     "typescript": "^5"
   }
 }
