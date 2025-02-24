@@ -6,20 +6,20 @@ import {
   ThemeConfig,
 } from "antd";
 
-interface Props extends Omit<ButtonProps, "type"> {
-  type?: "primary" | "secondary";
+interface Props extends ButtonProps {
+  variants?: "primary" | "secondary";
   customTheme?: ThemeConfig;
 }
 
 const Button: React.FC<Props> = ({
   customTheme,
   children,
-  type = "primary",
+  variants,
   ...props
 }) => {
   let mergedTheme: ThemeConfig = {};
 
-  switch (type) {
+  switch (variants) {
     case "primary":
       mergedTheme = {
         token: {
