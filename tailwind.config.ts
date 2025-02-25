@@ -12,6 +12,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ["var(--font-roboto)", "sans-serif"],
+      },
       fontSize: {
         xs: "1.2rem", // 12px
         sm: "1.4rem", // 14px
@@ -27,6 +30,13 @@ const config: Config = {
         "8xl": "9.6rem", // 96px
         "9xl": "12.8rem", // 128px
         "10xl": "16rem", // 160px
+      },
+      borderRadius: {
+        sm: "var(--border-radius-1)", // 16px
+        md: "var(--border-radius-2)", // 32px
+        lg: "var(--border-radius-3)", // 48px
+        xl: "var(--border-radius-4)", // 64px
+        full: "var(--border-radius-full)", // Fully rounded
       },
       colors: {
         background: "var(--background)",

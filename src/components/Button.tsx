@@ -17,23 +17,37 @@ const Button: React.FC<Props> = ({
   variants,
   ...props
 }) => {
-  let mergedTheme: ThemeConfig = {};
+  let mergedTheme: ThemeConfig = {
+    token: { fontFamily: "var(--font-roboto)" },
+    cssVar: true,
+  };
 
   switch (variants) {
     case "primary":
       mergedTheme = {
-        token: {
-          colorPrimary: customTheme?.token?.colorPrimary ?? "#1890ff",
-          borderRadius: customTheme?.token?.borderRadius ?? 10,
+        ...mergedTheme,
+        components: {
+          Button: {
+            borderRadius: "var(--border-radius-2)" as unknown as number,
+            defaultColor: "var(--color-foreground)",
+            defaultBg: "var(--color-light-blue-6)",
+            defaultBorderColor: "var(--color-light-blue-6)",
+            defaultHoverBg: "var(--color-light-blue-5)",
+            defaultHoverBorderColor: "var(--color-light-blue-5)",
+            defaultHoverColor: "var(--color-foreground)",
+            defaultActiveBg: "var(--color-light-blue-7)",
+            defaultActiveBorderColor: "var(--color-light-blue-7)",
+            defaultActiveColor: "var(--color-foreground)",
+          },
         },
       };
       break;
 
     case "secondary":
       mergedTheme = {
+        ...mergedTheme,
         token: {
-          colorPrimary: customTheme?.token?.colorPrimary ?? "#000000",
-          borderRadius: customTheme?.token?.borderRadius ?? 5,
+          ...mergedTheme.token,
         },
       };
       break;
@@ -44,7 +58,7 @@ const Button: React.FC<Props> = ({
 
   return (
     <ConfigProvider theme={mergedTheme}>
-      <ButtonAntd type="primary" {...props}>
+      <ButtonAntd {...props} type="default">
         {children}
       </ButtonAntd>
     </ConfigProvider>

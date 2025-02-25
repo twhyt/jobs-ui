@@ -3,10 +3,10 @@
 @tailwind utilities;
 
 @layer base {
-  html {
-    font-size: 62.5%; /* 1rem = 10px */
+  :root {
+    --color-foreground: #ffffff;
 
-    /* -------------- Light Mode -------------- */
+    /* -------------- Color Light Mode -------------- */
     --color-light-blue-1: #e6f7ff;
     --color-light-blue-2: #bae3ff;
     --color-light-blue-3: #91ccff;
@@ -40,7 +40,7 @@
     --color-light-cyan-9: #00474f;
     --color-light-cyan-10: #002329;
 
-    /* -------------- Dark Mode -------------- */
+    /* -------------- Color Dark Mode -------------- */
     --color-dark-blue-1: #000a3e;
     --color-dark-blue-2: #081a64;
     --color-dark-blue-3: #00258c;
@@ -73,5 +73,17 @@
     --color-dark-cyan-8: #56d6c9;
     --color-dark-cyan-9: #8ae5d9;
     --color-dark-cyan-10: #c0f0e8;
+
+    /* -------------- Border radius -------------- */
+    --border-radius-1: 16px;
+    --border-radius-2: 32px;
+    --border-radius-3: 48px;
+    --border-radius-4: 64px;
+    --border-radius-full: 9999px;
+  }
+
+  html {
+    font-size: 62.5%; /* 1rem = 10px */
+    font-family: "Roboto", sans-serif;
   }
 }
