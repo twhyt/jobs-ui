@@ -16,20 +16,20 @@ const config: Config = {
         sans: ["var(--font-roboto)", "sans-serif"],
       },
       fontSize: {
-        xs: "1.2rem", // 12px
-        sm: "1.4rem", // 14px
-        base: "1.6rem", // 16px (default)
-        lg: "1.8rem", // 18px
-        xl: "2rem", // 20px
-        "2xl": "2.4rem", // 24px
-        "3xl": "3rem", // 30px
-        "4xl": "3.6rem", // 36px
-        "5xl": "4.8rem", // 48px
-        "6xl": "6.4rem", // 64px
-        "7xl": "8rem", // 80px
-        "8xl": "9.6rem", // 96px
-        "9xl": "12.8rem", // 128px
-        "10xl": "16rem", // 160px
+        xs: "var(--font-xs)",
+        sm: "var(--font-sm)",
+        base: "var(--font-base)",
+        lg: "var(--font-lg)",
+        xl: "var(--font-xl)",
+        "2xl": "var(--font-2xl)",
+        "3xl": "var(--font-3xl)",
+        "4xl": "var(--font-4xl)",
+        "5xl": "var(--font-5xl)",
+        "6xl": "var(--font-6xl)",
+        "7xl": "var(--font-7xl)",
+        "8xl": "var(--font-8xl)",
+        "9xl": "var(--font-9xl)",
+        "10xl": "var(--font-10xl)",
       },
       borderRadius: {
         sm: "var(--border-radius-1)", // 16px

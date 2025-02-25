@@ -4,7 +4,10 @@
 
 @layer base {
   :root {
-    --color-foreground: #ffffff;
+    --color-foreground-1: #000000;
+    --color-foreground-2: #ffffff;
+    --color-foreground-3: #00000040;
+    --color-foreground-4: #000000d9;
 
     /* -------------- Color Light Mode -------------- */
     --color-light-blue-1: #e6f7ff;
@@ -39,6 +42,13 @@
     --color-light-cyan-8: #006366;
     --color-light-cyan-9: #00474f;
     --color-light-cyan-10: #002329;
+
+    --color-light-gray-2: #fafafa;
+    --color-light-gray-3: #f5f5f5;
+    --color-light-gray-5: #d9d9d9;
+
+    --color-light-red-1: #ff4d4f;
+    --color-light-red-2: #cf1322;
 
     /* -------------- Color Dark Mode -------------- */
     --color-dark-blue-1: #000a3e;
@@ -80,6 +90,22 @@
     --border-radius-3: 48px;
     --border-radius-4: 64px;
     --border-radius-full: 9999px;
+
+    /* -------------- Font -------------- */
+    --font-xs: 1.2rem; /* 12px */
+    --font-sm: 1.4rem; /* 14px */
+    --font-base: 1.6rem; /* 16px (default) */
+    --font-lg: 1.8rem; /* 18px */
+    --font-xl: 2rem; /* 20px */
+    --font-2xl: 2.4rem; /* 24px */
+    --font-3xl: 3rem; /* 30px */
+    --font-4xl: 3.6rem; /* 36px */
+    --font-5xl: 4.8rem; /* 48px */
+    --font-6xl: 6.4rem; /* 64px */
+    --font-7xl: 8rem; /* 80px */
+    --font-8xl: 9.6rem; /* 96px */
+    --font-9xl: 12.8rem; /* 128px */
+    --font-10xl: 16rem; /* 160px */
   }
 
   html {
