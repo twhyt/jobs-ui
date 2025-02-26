@@ -17,159 +17,247 @@ const Button: React.FC<Props> = ({
   children,
   variants,
   size,
+  danger,
   ...props
 }) => {
-  const disabledToken = {
-    colorTextDisabled: "var(--color-foreground-3)",
-    borderColorDisabled: "var(--color-light-gray-5)",
-    colorBgContainerDisabled: "var(--color-light-gray-3)",
+  const getSizeStyles = (size: string | undefined) => {
+    switch (size) {
+      case "small":
+        return { fontSize: "var(--font-sm)", padding: 7 };
+      case "large":
+        return { fontSize: "var(--font-lg)", padding: 15 };
+      default:
+        return { fontSize: "var(--font-base)", padding: 15 };
+    }
   };
-  // const errorToken = {
-  //   colorErrorText: "var(--color-foreground-2)",
-  //   colorErrorBg: "var(--color-light-red-1)",
-  //   colorErrorBorder: "var(--color-light-red-1)",
-  //   colorErrorActive: "var(--color-light-red-2)",
-  //   colorErrorBgHover: "var(--color-light-red-2)",
-  //   colorErrorBorderHover: "var(--color-light-red-1)",
-  // };
 
-  let buttonType:
-    | "link"
-    | "text"
-    | "primary"
-    | "dashed"
-    | "default"
-    | undefined = "default";
-  let mergedTheme: ThemeConfig = {
-    token: {
-      fontFamily: "var(--font-roboto)",
+  const getButtonType = (variants: string | undefined) => {
+    const buttonType:
+      | "link"
+      | "text"
+      | "primary"
+      | "dashed"
+      | "default"
+      | undefined = "default";
+
+    switch (variants) {
+      case "link":
+        return "link";
+
+      case "dashed":
+        return "dashed";
+
+      case "text":
+        return "text";
+
+      default:
+        return buttonType;
+    }
+  };
+
+  const getVariantStyles = (
+    variants: string | undefined,
+    size: {
+      fontSize: string;
+      padding: number;
     },
-    cssVar: true,
-    ...customTheme,
+    customTheme: ThemeConfig | undefined,
+    danger: boolean | undefined
+  ) => {
+    const { fontSize, padding } = size;
+
+    const mergedTheme: ThemeConfig = {
+      token: {
+        fontFamily: "var(--font-roboto)",
+      },
+      cssVar: true,
+      ...customTheme,
+    };
+
+    const disabledToken = {
+      colorTextDisabled: "var(--color-foreground-3)",
+      borderColorDisabled: "var(--color-light-gray-5)",
+      colorBgContainerDisabled: "var(--color-light-gray-3)",
+    };
+
+    switch (variants) {
+      case "primary":
+        return {
+          ...mergedTheme,
+          components: {
+            Button: danger
+              ? {
+                  fontSize: fontSize as unknown as number,
+                  paddingInline: padding,
+                  borderRadius: "var(--border-radius-2)" as unknown as number,
+                  defaultColor: "var(--color-foreground-2)",
+                  defaultBorderColor: "var(--color-light-red-1)",
+                  defaultBg: "var(--color-light-red-1)",
+                  defaultHoverColor: "var(--color-foreground-2)",
+                  defaultHoverBorderColor: "var(--color-light-red-1)",
+                  defaultHoverBg: "var(--color-light-red-2)",
+                  defaultActiveColor: "var(--color-foreground-2)",
+                  defaultActiveBorderColor: "var(--color-light-red-1)",
+                  defaultActiveBg: "var(--color-light-red-2)",
+                  ...disabledToken,
+                }
+              : {
+                  fontSize: fontSize as unknown as number,
+                  paddingInline: padding,
+                  borderRadius: "var(--border-radius-2)" as unknown as number,
+                  defaultColor: "var(--color-foreground-2)",
+                  defaultBorderColor: "var(--color-light-blue-6)",
+                  defaultBg: "var(--color-light-blue-6)",
+                  defaultHoverColor: "var(--color-foreground-2)",
+                  defaultHoverBorderColor: "var(--color-light-blue-5)",
+                  defaultHoverBg: "var(--color-light-blue-5)",
+                  defaultActiveColor: "var(--color-foreground-2)",
+                  defaultActiveBorderColor: "var(--color-light-blue-7)",
+                  defaultActiveBg: "var(--color-light-blue-7)",
+                  ...disabledToken,
+                },
+          },
+        };
+
+      case "secondary":
+        return {
+          ...mergedTheme,
+          components: {
+            Button: danger
+              ? {
+                  fontSize: fontSize as unknown as number,
+                  paddingInline: padding,
+                  borderRadius: "var(--border-radius-2)" as unknown as number,
+                  defaultColor: "var(--color-light-red-1)",
+                  defaultBorderColor: "var(--color-light-red-1)",
+                  defaultBg: "var(--color-foreground-2)",
+                  defaultHoverColor: "var(--color-light-red-1)",
+                  defaultHoverBorderColor: "var(--color-light-red-1)",
+                  defaultHoverBg: "var(--color-foreground-2)",
+                  defaultActiveColor: "var(--color-light-red-1)",
+                  defaultActiveBorderColor: "var(--color-light-red-1)",
+                  defaultActiveBg: "var(--color-foreground-2)",
+                  ...disabledToken,
+                }
+              : {
+                  fontSize: fontSize as unknown as number,
+                  paddingInline: padding,
+                  borderRadius: "var(--border-radius-2)" as unknown as number,
+                  defaultColor: "var(--color-light-blue-6)",
+                  defaultBorderColor: "var(--color-light-blue-6)",
+                  defaultBg: "var(--color-foreground-2)",
+                  defaultHoverColor: "var(--color-light-blue-5)",
+                  defaultHoverBorderColor: "var(--color-light-blue-5)",
+                  defaultHoverBg: "var(--color-foreground-2)",
+                  defaultActiveColor: "var(--color-light-blue-7)",
+                  defaultActiveBorderColor: "var(--color-light-blue-7)",
+                  defaultActiveBg: "var(--color-foreground-2)",
+                  ...disabledToken,
+                },
+          },
+        };
+
+      case "dashed":
+        return {
+          ...mergedTheme,
+          components: {
+            Button: danger
+              ? {
+                  fontSize: fontSize as unknown as number,
+                  paddingInline: padding,
+                  borderRadius: "var(--border-radius-2)" as unknown as number,
+                  defaultColor: "var(--color-light-red-1)",
+                  defaultBorderColor: "var(--color-light-red-1)",
+                  defaultBg: "var(--color-foreground-2)",
+                  defaultHoverColor: "var(--color-light-red-1)",
+                  defaultHoverBorderColor: "var(--color-light-red-1)",
+                  defaultHoverBg: "var(--color-foreground-2)",
+                  defaultActiveColor: "var(--color-light-red-1)",
+                  defaultActiveBorderColor: "var(--color-light-red-1)",
+                  defaultActiveBg: "var(--color-foreground-2)",
+                  ...disabledToken,
+                }
+              : {
+                  fontSize: fontSize as unknown as number,
+                  paddingInline: padding,
+                  borderRadius: "var(--border-radius-2)" as unknown as number,
+                  defaultColor: "var(--color-foreground-4)",
+                  defaultBorderColor: "var(--color-light-gray-5)",
+                  defaultBg: "var(--color-foreground-2)",
+                  defaultHoverColor: "var(--color-light-blue-6)",
+                  defaultHoverBorderColor: "var(--color-light-blue-6)",
+                  defaultHoverBg: "var(--color-foreground-2)",
+                  defaultActiveColor: "var(--color-light-blue-7)",
+                  defaultActiveBorderColor: "var(--color-light-blue-7)",
+                  defaultActiveBg: "var(--color-foreground-2)",
+                  ...disabledToken,
+                },
+          },
+        };
+
+      case "link":
+        return {
+          ...mergedTheme,
+          components: {
+            Button: danger
+              ? {
+                  fontSize: fontSize as unknown as number,
+                  paddingInline: padding,
+                  colorLink: "var(--color-light-red-1)",
+                  colorLinkHover: "var(--color-light-red-2)",
+                  colorLinkActive: "var(--color-light-red-1)",
+                  ...disabledToken,
+                }
+              : {
+                  fontSize: fontSize as unknown as number,
+                  paddingInline: padding,
+                  colorLink: "var(--color-light-blue-6)",
+                  colorLinkHover: "var(--color-light-blue-6)",
+                  colorLinkActive: "var(--color-light-blue-6)",
+                  ...disabledToken,
+                },
+          },
+        };
+
+      case "text":
+        return {
+          ...mergedTheme,
+          components: {
+            Button: danger
+              ? {
+                  fontSize: fontSize as unknown as number,
+                  paddingInline: padding,
+                  textTextColor: "var(--color-light-red-1)",
+                  textHoverBg: "var(--color-light-red-1)",
+                  textTextHoverColor: "var(--color-foreground-2)",
+                  textTextActiveColor: "var(--color-foreground-2)",
+                  colorBgTextActive: "var(--color-light-red-2)",
+                  ...disabledToken,
+                }
+              : {
+                  fontSize: fontSize as unknown as number,
+                  paddingInline: padding,
+                  textTextColor: "var(--color-foreground-4)",
+                  textHoverBg: "var(--color-light-gray-2)",
+                  colorBgTextActive: "var(--color-light-gray-3)",
+                  ...disabledToken,
+                },
+          },
+        };
+
+      default:
+        return mergedTheme;
+    }
   };
-  let fontSize: string = "var(--font-base)";
-  let padding: number = 15;
 
-  switch (size) {
-    case "small":
-      fontSize = "var(--font-sm)";
-      padding = 7;
-      break;
-
-    case "large":
-      fontSize = "var(--font-lg)";
-      break;
-
-    default:
-      break;
-  }
-
-  switch (variants) {
-    case "primary":
-      mergedTheme = {
-        ...mergedTheme,
-        components: {
-          Button: {
-            fontSize: fontSize as unknown as number,
-            paddingInline: padding,
-            borderRadius: "var(--border-radius-2)" as unknown as number,
-            defaultColor: "var(--color-foreground-2)",
-            defaultBorderColor: "var(--color-light-blue-6)",
-            defaultBg: "var(--color-light-blue-6)",
-            defaultHoverColor: "var(--color-foreground-2)",
-            defaultHoverBorderColor: "var(--color-light-blue-5)",
-            defaultHoverBg: "var(--color-light-blue-5)",
-            defaultActiveColor: "var(--color-foreground-2)",
-            defaultActiveBorderColor: "var(--color-light-blue-7)",
-            defaultActiveBg: "var(--color-light-blue-7)",
-            ...disabledToken,
-          },
-        },
-      };
-      break;
-
-    case "secondary":
-      mergedTheme = {
-        ...mergedTheme,
-        components: {
-          Button: {
-            fontSize: fontSize as unknown as number,
-            paddingInline: padding,
-            borderRadius: "var(--border-radius-2)" as unknown as number,
-            defaultColor: "var(--color-light-blue-6)",
-            defaultBorderColor: "var(--color-light-blue-6)",
-            defaultBg: "var(--color-foreground-2)",
-            defaultHoverColor: "var(--color-light-blue-5)",
-            defaultHoverBorderColor: "var(--color-light-blue-5)",
-            defaultHoverBg: "var(--color-foreground-2)",
-            defaultActiveColor: "var(--color-light-blue-7)",
-            defaultActiveBorderColor: "var(--color-light-blue-7)",
-            defaultActiveBg: "var(--color-foreground-2)",
-            ...disabledToken,
-          },
-        },
-      };
-      break;
-
-    case "dashed":
-      buttonType = "dashed";
-      mergedTheme = {
-        ...mergedTheme,
-        components: {
-          Button: {
-            fontSize: fontSize as unknown as number,
-            paddingInline: padding,
-            borderRadius: "var(--border-radius-2)" as unknown as number,
-            defaultColor: "var(--color-foreground-4)",
-            defaultBorderColor: "var(--color-light-gray-5)",
-            defaultBg: "var(--color-foreground-2)",
-            defaultHoverColor: "var(--color-light-blue-6)",
-            defaultHoverBorderColor: "var(--color-light-blue-6)",
-            defaultHoverBg: "var(--color-foreground-2)",
-            defaultActiveColor: "var(--color-light-blue-7)",
-            defaultActiveBorderColor: "var(--color-light-blue-7)",
-            defaultActiveBg: "var(--color-foreground-2)",
-            ...disabledToken,
-          },
-        },
-      };
-      break;
-
-    case "link":
-      buttonType = "link";
-      mergedTheme = {
-        ...mergedTheme,
-        components: {
-          Button: {
-            fontSize: fontSize as unknown as number,
-            paddingInline: padding,
-            defaultColor: "var(--color-light-blue-6)",
-            ...disabledToken,
-          },
-        },
-      };
-      break;
-
-    case "text":
-      buttonType = "text";
-      mergedTheme = {
-        ...mergedTheme,
-        components: {
-          Button: {
-            fontSize: fontSize as unknown as number,
-            paddingInline: padding,
-            textTextColor: "var(--color-foreground-4)",
-            textHoverBg: "var(--color-light-gray-2)",
-            colorBgTextActive: "var(--color-light-gray-3)",
-            ...disabledToken,
-          },
-        },
-      };
-      break;
-
-    default:
-      break;
-  }
+  const sizeStyles = getSizeStyles(size);
+  const buttonType = getButtonType(variants);
+  const mergedTheme = getVariantStyles(
+    variants,
+    sizeStyles,
+    customTheme,
+    danger
+  );
 
   return (
     <ConfigProvider theme={mergedTheme}>
