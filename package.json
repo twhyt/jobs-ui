@@ -21,7 +21,8 @@
     "lint": "next lint",
     "pre-build": "tsup && cp -R src/styles dist/",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "publish": "npm publish --access public"
   },
   "peerDependencies": {
     "antd": "^5.0.0",
