@@ -23,11 +23,11 @@ const Button: React.FC<Props> = ({
   const getSizeStyles = (size: string | undefined) => {
     switch (size) {
       case "small":
-        return { fontSize: "var(--font-sm)", padding: 7 };
+        return { fontSize: "var(--jobs-font-sm)", padding: 7 };
       case "large":
-        return { fontSize: "var(--font-lg)", padding: 15 };
+        return { fontSize: "var(--jobs-font-lg)", padding: 15 };
       default:
-        return { fontSize: "var(--font-base)", padding: 15 };
+        return { fontSize: "var(--jobs-font-base)", padding: 15 };
     }
   };
 
@@ -68,16 +68,16 @@ const Button: React.FC<Props> = ({
 
     const mergedTheme: ThemeConfig = {
       token: {
-        fontFamily: "var(--font-roboto)",
+        fontFamily: "var(--jobs-font-roboto)",
       },
       cssVar: true,
       ...customTheme,
     };
 
     const disabledToken = {
-      colorTextDisabled: "var(--color-foreground-3)",
-      borderColorDisabled: "var(--color-light-gray-5)",
-      colorBgContainerDisabled: "var(--color-light-gray-3)",
+      colorTextDisabled: "var(--jobs-color-foreground-3)",
+      borderColorDisabled: "var(--jobs-color-light-gray-5)",
+      colorBgContainerDisabled: "var(--jobs-color-light-gray-3)",
     };
 
     switch (variants) {
@@ -89,31 +89,33 @@ const Button: React.FC<Props> = ({
               ? {
                   fontSize: fontSize as unknown as number,
                   paddingInline: padding,
-                  borderRadius: "var(--border-radius-2)" as unknown as number,
-                  defaultColor: "var(--color-foreground-2)",
-                  defaultBorderColor: "var(--color-light-red-1)",
-                  defaultBg: "var(--color-light-red-1)",
-                  defaultHoverColor: "var(--color-foreground-2)",
-                  defaultHoverBorderColor: "var(--color-light-red-1)",
-                  defaultHoverBg: "var(--color-light-red-2)",
-                  defaultActiveColor: "var(--color-foreground-2)",
-                  defaultActiveBorderColor: "var(--color-light-red-1)",
-                  defaultActiveBg: "var(--color-light-red-2)",
+                  borderRadius:
+                    "var(--jobs-border-radius-2)" as unknown as number,
+                  defaultColor: "var(--jobs-color-foreground-2)",
+                  defaultBorderColor: "var(--jobs-color-light-red-1)",
+                  defaultBg: "var(--jobs-color-light-red-1)",
+                  defaultHoverColor: "var(--jobs-color-foreground-2)",
+                  defaultHoverBorderColor: "var(--jobs-color-light-red-1)",
+                  defaultHoverBg: "var(--jobs-color-light-red-2)",
+                  defaultActiveColor: "var(--jobs-color-foreground-2)",
+                  defaultActiveBorderColor: "var(--jobs-color-light-red-1)",
+                  defaultActiveBg: "var(--jobs-color-light-red-2)",
                   ...disabledToken,
                 }
               : {
                   fontSize: fontSize as unknown as number,
                   paddingInline: padding,
-                  borderRadius: "var(--border-radius-2)" as unknown as number,
-                  defaultColor: "var(--color-foreground-2)",
-                  defaultBorderColor: "var(--color-light-blue-6)",
-                  defaultBg: "var(--color-light-blue-6)",
-                  defaultHoverColor: "var(--color-foreground-2)",
-                  defaultHoverBorderColor: "var(--color-light-blue-5)",
-                  defaultHoverBg: "var(--color-light-blue-5)",
-                  defaultActiveColor: "var(--color-foreground-2)",
-                  defaultActiveBorderColor: "var(--color-light-blue-7)",
-                  defaultActiveBg: "var(--color-light-blue-7)",
+                  borderRadius:
+                    "var(--jobs-border-radius-2)" as unknown as number,
+                  defaultColor: "var(--jobs-color-foreground-2)",
+                  defaultBorderColor: "var(--jobs-color-light-blue-6)",
+                  defaultBg: "var(--jobs-color-light-blue-6)",
+                  defaultHoverColor: "var(--jobs-color-foreground-2)",
+                  defaultHoverBorderColor: "var(--jobs-color-light-blue-5)",
+                  defaultHoverBg: "var(--jobs-color-light-blue-5)",
+                  defaultActiveColor: "var(--jobs-color-foreground-2)",
+                  defaultActiveBorderColor: "var(--jobs-color-light-blue-7)",
+                  defaultActiveBg: "var(--jobs-color-light-blue-7)",
                   ...disabledToken,
                 },
           },
@@ -127,31 +129,33 @@ const Button: React.FC<Props> = ({
               ? {
                   fontSize: fontSize as unknown as number,
                   paddingInline: padding,
-                  borderRadius: "var(--border-radius-2)" as unknown as number,
-                  defaultColor: "var(--color-light-red-1)",
-                  defaultBorderColor: "var(--color-light-red-1)",
-                  defaultBg: "var(--color-foreground-2)",
-                  defaultHoverColor: "var(--color-light-red-1)",
-                  defaultHoverBorderColor: "var(--color-light-red-1)",
-                  defaultHoverBg: "var(--color-foreground-2)",
-                  defaultActiveColor: "var(--color-light-red-1)",
-                  defaultActiveBorderColor: "var(--color-light-red-1)",
-                  defaultActiveBg: "var(--color-foreground-2)",
+                  borderRadius:
+                    "var(--jobs-border-radius-2)" as unknown as number,
+                  defaultColor: "var(--jobs-color-light-red-1)",
+                  defaultBorderColor: "var(--jobs-color-light-red-1)",
+                  defaultBg: "var(--jobs-color-foreground-2)",
+                  defaultHoverColor: "var(--jobs-color-light-red-1)",
+                  defaultHoverBorderColor: "var(--jobs-color-light-red-1)",
+                  defaultHoverBg: "var(--jobs-color-foreground-2)",
+                  defaultActiveColor: "var(--jobs-color-light-red-1)",
+                  defaultActiveBorderColor: "var(--jobs-color-light-red-1)",
+                  defaultActiveBg: "var(--jobs-color-foreground-2)",
                   ...disabledToken,
                 }
               : {
                   fontSize: fontSize as unknown as number,
                   paddingInline: padding,
-                  borderRadius: "var(--border-radius-2)" as unknown as number,
-                  defaultColor: "var(--color-light-blue-6)",
-                  defaultBorderColor: "var(--color-light-blue-6)",
-                  defaultBg: "var(--color-foreground-2)",
-                  defaultHoverColor: "var(--color-light-blue-5)",
-                  defaultHoverBorderColor: "var(--color-light-blue-5)",
-                  defaultHoverBg: "var(--color-foreground-2)",
-                  defaultActiveColor: "var(--color-light-blue-7)",
-                  defaultActiveBorderColor: "var(--color-light-blue-7)",
-                  defaultActiveBg: "var(--color-foreground-2)",
+                  borderRadius:
+                    "var(--jobs-border-radius-2)" as unknown as number,
+                  defaultColor: "var(--jobs-color-light-blue-6)",
+                  defaultBorderColor: "var(--jobs-color-light-blue-6)",
+                  defaultBg: "var(--jobs-color-foreground-2)",
+                  defaultHoverColor: "var(--jobs-color-light-blue-5)",
+                  defaultHoverBorderColor: "var(--jobs-color-light-blue-5)",
+                  defaultHoverBg: "var(--jobs-color-foreground-2)",
+                  defaultActiveColor: "var(--jobs-color-light-blue-7)",
+                  defaultActiveBorderColor: "var(--jobs-color-light-blue-7)",
+                  defaultActiveBg: "var(--jobs-color-foreground-2)",
                   ...disabledToken,
                 },
           },
@@ -165,31 +169,33 @@ const Button: React.FC<Props> = ({
               ? {
                   fontSize: fontSize as unknown as number,
                   paddingInline: padding,
-                  borderRadius: "var(--border-radius-2)" as unknown as number,
-                  defaultColor: "var(--color-light-red-1)",
-                  defaultBorderColor: "var(--color-light-red-1)",
-                  defaultBg: "var(--color-foreground-2)",
-                  defaultHoverColor: "var(--color-light-red-1)",
-                  defaultHoverBorderColor: "var(--color-light-red-1)",
-                  defaultHoverBg: "var(--color-foreground-2)",
-                  defaultActiveColor: "var(--color-light-red-1)",
-                  defaultActiveBorderColor: "var(--color-light-red-1)",
-                  defaultActiveBg: "var(--color-foreground-2)",
+                  borderRadius:
+                    "var(--jobs-border-radius-2)" as unknown as number,
+                  defaultColor: "var(--jobs-color-light-red-1)",
+                  defaultBorderColor: "var(--jobs-color-light-red-1)",
+                  defaultBg: "var(--jobs-color-foreground-2)",
+                  defaultHoverColor: "var(--jobs-color-light-red-1)",
+                  defaultHoverBorderColor: "var(--jobs-color-light-red-1)",
+                  defaultHoverBg: "var(--jobs-color-foreground-2)",
+                  defaultActiveColor: "var(--jobs-color-light-red-1)",
+                  defaultActiveBorderColor: "var(--jobs-color-light-red-1)",
+                  defaultActiveBg: "var(--jobs-color-foreground-2)",
                   ...disabledToken,
                 }
               : {
                   fontSize: fontSize as unknown as number,
                   paddingInline: padding,
-                  borderRadius: "var(--border-radius-2)" as unknown as number,
-                  defaultColor: "var(--color-foreground-4)",
-                  defaultBorderColor: "var(--color-light-gray-5)",
-                  defaultBg: "var(--color-foreground-2)",
-                  defaultHoverColor: "var(--color-light-blue-6)",
-                  defaultHoverBorderColor: "var(--color-light-blue-6)",
-                  defaultHoverBg: "var(--color-foreground-2)",
-                  defaultActiveColor: "var(--color-light-blue-7)",
-                  defaultActiveBorderColor: "var(--color-light-blue-7)",
-                  defaultActiveBg: "var(--color-foreground-2)",
+                  borderRadius:
+                    "var(--jobs-border-radius-2)" as unknown as number,
+                  defaultColor: "var(--jobs-color-foreground-4)",
+                  defaultBorderColor: "var(--jobs-color-light-gray-5)",
+                  defaultBg: "var(--jobs-color-foreground-2)",
+                  defaultHoverColor: "var(--jobs-color-light-blue-6)",
+                  defaultHoverBorderColor: "var(--jobs-color-light-blue-6)",
+                  defaultHoverBg: "var(--jobs-color-foreground-2)",
+                  defaultActiveColor: "var(--jobs-color-light-blue-7)",
+                  defaultActiveBorderColor: "var(--jobs-color-light-blue-7)",
+                  defaultActiveBg: "var(--jobs-color-foreground-2)",
                   ...disabledToken,
                 },
           },
@@ -203,17 +209,17 @@ const Button: React.FC<Props> = ({
               ? {
                   fontSize: fontSize as unknown as number,
                   paddingInline: padding,
-                  colorLink: "var(--color-light-red-1)",
-                  colorLinkHover: "var(--color-light-red-2)",
-                  colorLinkActive: "var(--color-light-red-1)",
+                  colorLink: "var(--jobs-color-light-red-1)",
+                  colorLinkHover: "var(--jobs-color-light-red-2)",
+                  colorLinkActive: "var(--jobs-color-light-red-1)",
                   ...disabledToken,
                 }
               : {
                   fontSize: fontSize as unknown as number,
                   paddingInline: padding,
-                  colorLink: "var(--color-light-blue-6)",
-                  colorLinkHover: "var(--color-light-blue-6)",
-                  colorLinkActive: "var(--color-light-blue-6)",
+                  colorLink: "var(--jobs-color-light-blue-6)",
+                  colorLinkHover: "var(--jobs-color-light-blue-6)",
+                  colorLinkActive: "var(--jobs-color-light-blue-6)",
                   ...disabledToken,
                 },
           },
@@ -227,19 +233,19 @@ const Button: React.FC<Props> = ({
               ? {
                   fontSize: fontSize as unknown as number,
                   paddingInline: padding,
-                  textTextColor: "var(--color-light-red-1)",
-                  textHoverBg: "var(--color-light-red-1)",
-                  textTextHoverColor: "var(--color-foreground-2)",
-                  textTextActiveColor: "var(--color-foreground-2)",
-                  colorBgTextActive: "var(--color-light-red-2)",
+                  textTextColor: "var(--jobs-color-light-red-1)",
+                  textHoverBg: "var(--jobs-color-light-red-1)",
+                  textTextHoverColor: "var(--jobs-color-foreground-2)",
+                  textTextActiveColor: "var(--jobs-color-foreground-2)",
+                  colorBgTextActive: "var(--jobs-color-light-red-2)",
                   ...disabledToken,
                 }
               : {
                   fontSize: fontSize as unknown as number,
                   paddingInline: padding,
-                  textTextColor: "var(--color-foreground-4)",
-                  textHoverBg: "var(--color-light-gray-2)",
-                  colorBgTextActive: "var(--color-light-gray-3)",
+                  textTextColor: "var(--jobs-color-foreground-4)",
+                  textHoverBg: "var(--jobs-color-light-gray-2)",
+                  colorBgTextActive: "var(--jobs-color-light-gray-3)",
                   ...disabledToken,
                 },
           },
@@ -261,7 +267,7 @@ const Button: React.FC<Props> = ({
 
   return (
     <ConfigProvider theme={mergedTheme}>
-      <ButtonAntd {...props} type={buttonType}>
+      <ButtonAntd style={{ width: "100%" }} {...props} type={buttonType}>
         {children}
       </ButtonAntd>
     </ConfigProvider>

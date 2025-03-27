@@ -4,112 +4,101 @@
 
 @layer base {
   :root {
-    --color-foreground-1: #000000;
-    --color-foreground-2: #ffffff;
-    --color-foreground-3: #00000040;
-    --color-foreground-4: #000000d9;
+    --jobs-color-foreground-1: #000000;
+    --jobs-color-foreground-2: #ffffff;
+    --jobs-color-foreground-3: #00000040;
+    --jobs-color-foreground-4: #000000d9;
 
     /* -------------- Color Light Mode -------------- */
-    --color-light-blue-1: #e6f7ff;
-    --color-light-blue-2: #bae3ff;
-    --color-light-blue-3: #91ccff;
-    --color-light-blue-4: #69b4ff;
-    --color-light-blue-5: #4099ff;
-    --color-light-blue-6: #1a34ff;
-    --color-light-blue-7: #0947d9;
-    --color-light-blue-8: #0030b3;
-    --color-light-blue-9: #001c8c;
-    --color-light-blue-10: #001166;
-
-    --color-light-green-1: #edffed;
-    --color-light-green-2: #bef7c2;
-    --color-light-green-3: #8feb9b;
-    --color-light-green-4: #64de78;
-    --color-light-green-5: #3dd15b;
-    --color-light-green-6: #008a20;
-    --color-light-green-7: #027420;
-    --color-light-green-8: #036821;
-    --color-light-green-9: #00521b;
-    --color-light-green-10: #002b10;
-
-    --color-light-cyan-1: #e6fffb;
-    --color-light-cyan-2: #b5f5ec;
-    --color-light-cyan-3: #87e8de;
-    --color-light-cyan-4: #5cdbd3;
-    --color-light-cyan-5: #36cfc9;
-    --color-light-cyan-6: #13c2c2;
-    --color-light-cyan-7: #007b80;
-    --color-light-cyan-8: #006366;
-    --color-light-cyan-9: #00474f;
-    --color-light-cyan-10: #002329;
-
-    --color-light-gray-2: #fafafa;
-    --color-light-gray-3: #f5f5f5;
-    --color-light-gray-5: #d9d9d9;
-
-    --color-light-red-1: #ff4d4f;
-    --color-light-red-2: #cf1322;
+    --jobs-color-light-blue-1: #e6f7ff;
+    --jobs-color-light-blue-2: #bae3ff;
+    --jobs-color-light-blue-3: #91ccff;
+    --jobs-color-light-blue-4: #69b4ff;
+    --jobs-color-light-blue-5: #4099ff;
+    --jobs-color-light-blue-6: #1a34ff;
+    --jobs-color-light-blue-7: #0947d9;
+    --jobs-color-light-blue-8: #0030b3;
+    --jobs-color-light-blue-9: #001c8c;
+    --jobs-color-light-blue-10: #001166;
+    --jobs-color-light-green-1: #edffed;
+    --jobs-color-light-green-2: #bef7c2;
+    --jobs-color-light-green-3: #8feb9b;
+    --jobs-color-light-green-4: #64de78;
+    --jobs-color-light-green-5: #3dd15b;
+    --jobs-color-light-green-6: #008a20;
+    --jobs-color-light-green-7: #027420;
+    --jobs-color-light-green-8: #036821;
+    --jobs-color-light-green-9: #00521b;
+    --jobs-color-light-green-10: #002b10;
+    --jobs-color-light-cyan-1: #e6fffb;
+    --jobs-color-light-cyan-2: #b5f5ec;
+    --jobs-color-light-cyan-3: #87e8de;
+    --jobs-color-light-cyan-4: #5cdbd3;
+    --jobs-color-light-cyan-5: #36cfc9;
+    --jobs-color-light-cyan-6: #13c2c2;
+    --jobs-color-light-cyan-7: #007b80;
+    --jobs-color-light-cyan-8: #006366;
+    --jobs-color-light-cyan-9: #00474f;
+    --jobs-color-light-cyan-10: #002329;
+    --jobs-color-light-gray-2: #fafafa;
+    --jobs-color-light-gray-3: #f5f5f5;
+    --jobs-color-light-gray-5: #d9d9d9;
+    --jobs-color-light-red-1: #ff4d4f;
+    --jobs-color-light-red-2: #cf1322;
 
     /* -------------- Color Dark Mode -------------- */
-    --color-dark-blue-1: #000a3e;
-    --color-dark-blue-2: #081a64;
-    --color-dark-blue-3: #00258c;
-    --color-dark-blue-4: #0037b7;
-    --color-dark-blue-5: #1129e1;
-    --color-dark-blue-6: #177ddc;
-    --color-dark-blue-7: #46a1fd;
-    --color-dark-blue-8: #6ebbff;
-    --color-dark-blue-9: #99d6ff;
-    --color-dark-blue-10: #cceeff;
-
-    --color-dark-green-1: #00240d;
-    --color-dark-green-2: #093b19;
-    --color-dark-green-3: #054f1b;
-    --color-dark-green-4: #0d5d22;
-    --color-dark-green-5: #0e7526;
-    --color-dark-green-6: #0fd837;
-    --color-dark-green-7: #29e34e;
-    --color-dark-green-8: #7bf38b;
-    --color-dark-green-9: #a8f7ad;
-    --color-dark-green-10: #d6ffd6;
-
-    --color-dark-cyan-1: #112123;
-    --color-dark-cyan-2: #113536;
-    --color-dark-cyan-3: #144747;
-    --color-dark-cyan-4: #185d5d;
-    --color-dark-cyan-5: #167070;
-    --color-dark-cyan-6: #10b2b2;
-    --color-dark-cyan-7: #30c0b7;
-    --color-dark-cyan-8: #56d6c9;
-    --color-dark-cyan-9: #8ae5d9;
-    --color-dark-cyan-10: #c0f0e8;
+    --jobs-color-dark-blue-1: #000a3e;
+    --jobs-color-dark-blue-2: #081a64;
+    --jobs-color-dark-blue-3: #00258c;
+    --jobs-color-dark-blue-4: #0037b7;
+    --jobs-color-dark-blue-5: #1129e1;
+    --jobs-color-dark-blue-6: #177ddc;
+    --jobs-color-dark-blue-7: #46a1fd;
+    --jobs-color-dark-blue-8: #6ebbff;
+    --jobs-color-dark-blue-9: #99d6ff;
+    --jobs-color-dark-blue-10: #cceeff;
+    --jobs-color-dark-green-1: #00240d;
+    --jobs-color-dark-green-2: #093b19;
+    --jobs-color-dark-green-3: #054f1b;
+    --jobs-color-dark-green-4: #0d5d22;
+    --jobs-color-dark-green-5: #0e7526;
+    --jobs-color-dark-green-6: #0fd837;
+    --jobs-color-dark-green-7: #29e34e;
+    --jobs-color-dark-green-8: #7bf38b;
+    --jobs-color-dark-green-9: #a8f7ad;
+    --jobs-color-dark-green-10: #d6ffd6;
+    --jobs-color-dark-cyan-1: #112123;
+    --jobs-color-dark-cyan-2: #113536;
+    --jobs-color-dark-cyan-3: #144747;
+    --jobs-color-dark-cyan-4: #185d5d;
+    --jobs-color-dark-cyan-5: #167070;
+    --jobs-color-dark-cyan-6: #10b2b2;
+    --jobs-color-dark-cyan-7: #30c0b7;
+    --jobs-color-dark-cyan-8: #56d6c9;
+    --jobs-color-dark-cyan-9: #8ae5d9;
+    --jobs-color-dark-cyan-10: #c0f0e8;
 
     /* -------------- Border radius -------------- */
-    --border-radius-1: 16px;
-    --border-radius-2: 32px;
-    --border-radius-3: 48px;
-    --border-radius-4: 64px;
-    --border-radius-full: 9999px;
+    --jobs-border-radius-1: 16px;
+    --jobs-border-radius-2: 32px;
+    --jobs-border-radius-3: 48px;
+    --jobs-border-radius-4: 64px;
+    --jobs-border-radius-full: 9999px;
 
     /* -------------- Font -------------- */
-    --font-xs: 1.2rem; /* 12px */
-    --font-sm: 1.4rem; /* 14px */
-    --font-base: 1.6rem; /* 16px (default) */
-    --font-lg: 1.8rem; /* 18px */
-    --font-xl: 2rem; /* 20px */
-    --font-2xl: 2.4rem; /* 24px */
-    --font-3xl: 3rem; /* 30px */
-    --font-4xl: 3.6rem; /* 36px */
-    --font-5xl: 4.8rem; /* 48px */
-    --font-6xl: 6.4rem; /* 64px */
-    --font-7xl: 8rem; /* 80px */
-    --font-8xl: 9.6rem; /* 96px */
-    --font-9xl: 12.8rem; /* 128px */
-    --font-10xl: 16rem; /* 160px */
-  }
-
-  html {
-    font-size: 62.5%; /* 1rem = 10px */
-    font-family: "Roboto", sans-serif;
+    --jobs-font-xs: 0.75rem; /* 12px */
+    --jobs-font-sm: 0.875rem; /* 14px */
+    --jobs-font-base: 1rem; /* 16px (default) */
+    --jobs-font-lg: 1.125rem; /* 18px */
+    --jobs-font-xl: 1.25rem; /* 20px */
+    --jobs-font-2xl: 1.5rem; /* 24px */
+    --jobs-font-3xl: 1.875rem; /* 30px */
+    --jobs-font-4xl: 2.25rem; /* 36px */
+    --jobs-font-5xl: 3rem; /* 48px */
+    --jobs-font-6xl: 4rem; /* 64px */
+    --jobs-font-7xl: 5rem; /* 80px */
+    --jobs-font-8xl: 6rem; /* 96px */
+    --jobs-font-9xl: 8rem; /* 128px */
+    --jobs-font-10xl: 10rem; /* 160px */
   }
 }
