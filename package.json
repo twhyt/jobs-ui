@@ -1,12 +1,12 @@
 {
   "name": "@jobs-ui/jobsolution-ui",
-  "version": "0.2.5-alpha.0",
+  "version": "0.2.7-alpha.0",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
-  "types": "./dist/index.d.ts",
+  "types": "dist/index.d.ts",
+  "styles": "dist/index.css",
   "files": [
-    "dist",
-    "src/styles"
+    "dist"
   ],
   "exports": {
     "types": "./dist/index.d.ts",
