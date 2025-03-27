@@ -10,7 +10,9 @@
   ],
   "exports": {
     "import": "./dist/index.esm.js",
-    "require": "./dist/index.cjs.js"
+    "require": "./dist/index.cjs.js",
+    "styles": "./dist/index.css",
+    "types": "./dist/index.d.ts"
   },
   "private": false,
   "scripts": {
