@@ -126,21 +126,34 @@ import type { User } from '@/types/user';
 
 ## 🧪 Testing
 
-* ใช้ [Jest](https://jestjs.io/) + [React Testing Library](https://testing-library.com/)
-* เขียน unit test สำหรับ logic สำคัญ
-* ใช้ `__tests__` folder หรือไฟล์ `.test.tsx`
+รอ Update
 
 ---
 
 ## 🛡️ Code Quality
 
 * ✅ ใช้ ESLint + Prettier + TypeScript
-* ✅ ใช้ Husky + lint-staged สำหรับ pre-commit checks
+<!-- * ✅ ใช้ Husky + lint-staged สำหรับ pre-commit checks -->
 * ✅ ใช้ commit message แบบ Conventional Commits
 
-```sh
-feat(component): add user card UI
-fix(auth): handle expired token case
+.eslintrc.json
+
+```text
+{
+  "plugins": ["@typescript-eslint"],
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:@typescript-eslint/recommended",
+    "prettier"
+  ],
+  "rules": {
+    "@typescript-eslint/no-unused-vars": "error",
+    "react/no-unknown-property": ["error", { "ignore": ["jsx", "global"] }],
+    "@typescript-eslint/no-inferrable-types": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@definitelytyped/no-unnecessary-generics": "off"
+  }
+}
 ```
 
 ---
