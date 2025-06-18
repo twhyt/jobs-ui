@@ -1,0 +1,99 @@
+:root {
+  // Theme
+  --text-title: rgba(0, 0, 0, 0.85);
+  --text-primary: rgba(0, 0, 0, 0.85);
+  --text-secondary: rgba(0, 0, 0, 0.45);
+  --text-disable: rgba(0, 0, 0, 0.25);
+
+  --text-onprimary: #ffffff;
+
+  --icon-onlight: #141414;
+  --icon-onprimary: #ffffff;
+
+  //functional
+  --success: #008a20;
+  --error: #ff4d4f;
+  --warning: #faad14;
+
+  // Palette
+  --white-02: rgba(255, 255, 255, 0.02);
+  --white-04: rgba(255, 255, 255, 0.04);
+  --white-06: rgba(255, 255, 255, 0.06);
+  --white-15: rgba(255, 255, 255, 0.15);
+  --white-25: rgba(255, 255, 255, 0.25);
+  --white-45: rgba(255, 255, 255, 0.45);
+  --white-85: rgba(255, 255, 255, 0.85);
+  --white-100: #ffffff;
+
+  --black-02: rgba(0, 0, 0, 0.02);
+  --black-04: rgba(0, 0, 0, 0.04);
+  --black-06: rgba(0, 0, 0, 0.06);
+  --black-15: rgba(0, 0, 0, 0.15);
+  --black-25: rgba(0, 0, 0, 0.25);
+  --black-45: rgba(0, 0, 0, 0.45);
+  --black-85: rgba(0, 0, 0, 0.85);
+  --black-100: #000000;
+
+  --gray-1: #ffffff;
+  --gray-2: #fafafa;
+  --gray-3: #f5f5f5;
+  --gray-4: #f0f0f0;
+  --gray-5: #d9d9d9;
+  --gray-6: #bfbfbf;
+  --gray-7: #8c8c8c;
+  --gray-8: #595959;
+  --gray-9: #434343;
+  --gray-10: #262626;
+  --gray-11: #1f1f1f;
+  --gray-12: #141414;
+  --gray-13: #141414;
+
+  --blue-1: #e6f7ff;
+  --blue-2: #bae3ff;
+  --blue-3: #91ccff;
+  --blue-4: #69b4ff;
+  --blue-5: #4099ff;
+  --blue-6: #1a34ff;
+  --blue-7: #0947d9;
+  --blue-8: #0030b3;
+  --blue-9: #001c8c;
+  --blue-10: #001166;
+
+  --green-1: #edffed;
+  --green-2: #bef7c2;
+  --green-3: #8feb9b;
+  --green-4: #64de78;
+  --green-5: #3dd15b;
+  --green-6: #008a20;
+  --green-7: #027420;
+  --green-8: #036821;
+  --green-9: #00521b;
+  --green-10: #002b10;
+
+  --cyan-1: #e6fffb;
+  --cyan-2: #b5f5ec;
+  --cyan-3: #87e8de;
+  --cyan-4: #5cdbd3;
+  --cyan-5: #36cfc9;
+  --cyan-6: #13c2c2;
+  --cyan-7: #007b80;
+  --cyan-8: #006366;
+  --cyan-9: #00474f;
+  --cyan-10: #002329;
+
+  --red-1: #fff1f0;
+  --red-2: #cf1322;
+
+  --yellow-1: #fffbe6;
+  --yellow-10: #613400;
+
+  /* -------------- Color Foreground -------------- */
+  --foreground-1: #000000;
+  --foreground-2: #ffffff;
+  --foreground-3: #00000040;
+  --foreground-4: #000000d9;
+}
+
+// .dark {
+//   --text-title: white;
+// }

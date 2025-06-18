@@ -1,3 +1,4 @@
+"use client";
 import { Button } from "@/components/button/Button";
 import Image from "next/image";
 import VideoRecorder from "./myrecord";
@@ -6,7 +7,7 @@ export default function Home() {
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <VideoRecorder/>
+        <VideoRecorder />
         <h1>POC</h1>
         <Button
           label="Button"

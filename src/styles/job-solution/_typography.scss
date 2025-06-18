@@ -1,0 +1,256 @@
+:root {
+  --weight-thin: 100;
+  --weight-extra-light: 200;
+  --weight-light: 300;
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semi-bold: 600;
+  --weight-bold: 700;
+  --weight-extra-bold: 800;
+  --weight-black: 900;
+
+  /* -------------- Font -------------- */
+  --font-xs: 0.75rem; /* 12px */
+  --font-sm: 0.875rem; /* 14px */
+  --font-base: 1rem; /* 16px (default) */
+  --font-lg: 1.125rem; /* 18px */
+  --font-xl: 1.25rem; /* 20px */
+  --font-2xl: 1.5rem; /* 24px */
+  --font-3xl: 1.875rem; /* 30px */
+  --font-4xl: 2.25rem; /* 36px */
+  --font-5xl: 3rem; /* 48px */
+  --font-6xl: 4rem; /* 64px */
+  --font-7xl: 5rem; /* 80px */
+  --font-8xl: 6rem; /* 96px */
+  --font-9xl: 8rem; /* 128px */
+  --font-10xl: 10rem; /* 160px */
+}
+
+.font-h1 {
+  font-size: 48px;
+  font-weight: var(--weight-bold);
+  line-height: 46px;
+  margin: 0px;
+  @media (max-width: 689px) {
+    font-size: 36px;
+    line-height: 50px;
+  }
+}
+
+.font-h2 {
+  font-size: 44px;
+  font-weight: var(--weight-bold);
+  line-height: 46px;
+  margin: 0px;
+}
+
+.font-h3 {
+  font-size: 38px;
+  font-weight: var(--weight-medium);
+  line-height: 46px;
+  margin: 0px;
+}
+
+.font-h4 {
+  font-size: 30px;
+  font-weight: var(--weight-medium);
+  line-height: 40px;
+  margin: 0px;
+}
+
+.font-h5 {
+  font-size: 24px;
+  font-weight: var(--weight-medium);
+  line-height: 32px;
+  margin: 0px;
+}
+
+.font-h6 {
+  font-size: 24px;
+  font-weight: var(--weight-regular);
+  line-height: 32px;
+  margin: 0px;
+}
+
+.font-h7 {
+  font-size: 20px;
+  font-weight: var(--weight-medium);
+  line-height: 24px;
+  margin: 0px;
+
+  @media (max-width: 689px) {
+    font-size: 18px;
+  }
+}
+
+.font-h8 {
+  font-size: 16px;
+  font-weight: var(--weight-regular);
+  line-height: 24px;
+  margin: 0px;
+}
+
+.font-h9 {
+  font-size: 16px;
+  font-weight: var(--weight-bold);
+  line-height: 24px;
+  margin: 0px;
+}
+
+.font-h10 {
+  font-size: 16px;
+  font-weight: var(--weight-medium);
+  line-height: 24px;
+  margin: 0px;
+}
+
+.font-subtitle1 {
+  font-size: 24px;
+  font-weight: var(--weight-medium);
+  line-height: 32px;
+  margin: 0px;
+}
+
+.font-subtitle2 {
+  font-size: 20px;
+  font-weight: var(--weight-medium);
+  line-height: 32px;
+  margin: 0px;
+}
+
+.font-subtitle4 {
+  font-size: 16px;
+  font-weight: var(--weight-medium);
+  line-height: 22px;
+  margin: 0px;
+}
+
+.font-subtitle5 {
+  font-size: 14px;
+  font-weight: var(--weight-medium);
+  line-height: 22px;
+  margin: 0px;
+}
+
+.font-subtitle6 {
+  font-size: 12px;
+  font-weight: var(--weight-medium);
+  line-height: 22px;
+  margin: 0px;
+}
+
+.font-body1 {
+  font-size: 14px;
+  font-weight: var(--weight-regular);
+  line-height: 22px;
+  margin: 0px;
+  @media (max-width: 689px) {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: var(--weight-medium);
+  }
+}
+
+.font-body2 {
+  font-size: 14px;
+  font-weight: var(--weight-regular);
+  line-height: 22px;
+  margin: 0px;
+}
+
+.font-body3 {
+  font-size: 14px;
+  font-weight: var(--weight-bold);
+  line-height: 22px;
+  margin: 0px;
+}
+
+.font-body4 {
+  font-size: 14px;
+  font-weight: var(--weight-bold);
+  line-height: 22px;
+  margin: 0px;
+}
+
+.font-body5 {
+  font-size: 16px;
+  font-weight: var(--weight-regular);
+  line-height: 150%;
+  margin: 0px;
+}
+
+.font-button2 {
+  font-size: 16px;
+  font-weight: var(--weight-regular);
+  margin: 0px;
+  line-height: 24px;
+}
+
+.font-button3 {
+  font-size: 14px;
+  font-weight: var(--weight-medium);
+  margin: 0px;
+  line-height: 22px;
+}
+
+.font-button4 {
+  font-size: 14px;
+  font-weight: var(--weight-regular);
+  margin: 0px;
+  line-height: 22px;
+}
+
+.font-button5 {
+  font-size: 12px;
+  font-weight: var(--weight-semi-bold);
+  line-height: 150%;
+  margin: 0px;
+}
+
+.font-regular-underline {
+  font-size: 14px;
+  font-weight: var(--weight-regular);
+  line-height: 22px;
+  text-decoration: underline;
+  margin: 0px;
+}
+
+.font-regular-strike {
+  font-size: 20px;
+  font-weight: var(--weight-semi-bold);
+  text-decoration: line-through;
+  margin: 0px;
+}
+
+.font-regular-italic {
+  font-size: 20px;
+  font-weight: var(--weight-regular);
+  font-style: italic;
+  margin: 0px;
+}
+
+.font-regular-code {
+  font-size: 16px;
+  font-weight: var(--weight-semi-bold);
+  margin: 0px;
+
+  font-family: "fira-code";
+}
+
+.font-footnote {
+  font-size: 12px;
+  font-weight: var(--weight-regular);
+  margin: 0px;
+}
+
+.font-sub-title-5 {
+  font-size: 14px;
+  font-weight: var(--weight-medium);
+  margin: 0px;
+}
+
+.font-footnote-description1 {
+  font-size: 12px;
+  font-weight: var(--weight-regular);
+  margin: 0px;
+}

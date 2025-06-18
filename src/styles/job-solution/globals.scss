@@ -1,0 +1,302 @@
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "_color.scss";
+@import "_border.scss";
+@import "_typography.scss";
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../assets/fonts/Roboto-VariableFont_wdth\,wght.ttf");
+}
+
+@font-face {
+  font-family: "Noto-sans-thai";
+  src: url("../assets/fonts/NotoSansThai-VariableFont_wdth\,wght.ttf");
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --tablet: 768px;
+  --desktop: 1024px;
+
+  --gradient-background1: linear-gradient(
+    18.18deg,
+    rgba(255, 255, 255, 1) -19.09%,
+    rgba(181, 245, 236, 1) 47.01%,
+    rgba(64, 153, 255, 1) 115.86%,
+    rgba(9, 71, 217, 1) 139.47%
+  );
+
+  --gradient-background2: linear-gradient(
+    177.1deg,
+    rgba(255, 255, 255, 1) 13.85%,
+    rgba(181, 245, 236, 1) 72.31%,
+    rgba(64, 153, 255, 1) 133.21%,
+    rgba(9, 71, 217, 1) 154.1%
+  );
+
+  --gradient-bg-hero-card: linear-gradient(
+    18.18deg,
+    #3379ff 0%,
+    #43e1ff 64%,
+    var(--green-2) 100%
+  );
+
+  --gradient-background-plan-team: linear-gradient(
+    28.13deg,
+    #4099ff 10.5%,
+    #43e1ff 70%,
+    #ffffff 100%
+  );
+
+  --gradient-background-plan-individual: linear-gradient(
+    28.13deg,
+    #1a34ff 0%,
+    #43e1ff 100%
+  );
+
+  --gradient-background-plan-free: linear-gradient(
+    28.13deg,
+    #0947d9 0%,
+    #bae3ff 100%
+  );
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+.dark {
+  --gradient-background-plan-team: linear-gradient(
+    28.13deg,
+    #177ddc 0%,
+    #46a1fd 50%,
+    #ffffff 100%
+  );
+  --gradient-background-plan-individual: linear-gradient(
+    28.13deg,
+    #177ddc 0%,
+    #99d6ff 100%
+  );
+  --gradient-background-plan-free: linear-gradient(
+    28.13deg,
+    #46a1fd 0%,
+    #99d6ff 100%
+  );
+}
+
+body {
+  font-family: Roboto, Noto-sans-thai;
+  transition: background-color 0.3s, color 0.3s;
+  background-color: var(--white-100);
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+body.light {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.dark body {
+  @apply bg-gray-900 text-white;
+}
+
+.main-font-family {
+  font-family: Roboto, Noto-sans-thai;
+}
+
+.hi {
+  background-color: red;
+}
+
+.header {
+  padding: 2.1vw 4.2vw;
+  box-shadow: 0px 2px 8px 0px #f0f1f2;
+  position: sticky;
+  top: 0;
+  background: var(--white-100);
+  z-index: 900;
+}
+
+.navigation-bar {
+  border-top: 1px solid var(--gray-5);
+  padding: 2.1vw 4.2vw;
+  position: sticky;
+  width: 100dvw;
+  bottom: 0;
+  background-color: var(--white-100);
+  z-index: 900;
+
+  .navigation-bar-button-add {
+    border-radius: 100%;
+    background-color: var(--blue-6);
+    aspect-ratio: 1;
+    min-width: 34px;
+    padding: 4px;
+  }
+
+  .navigation-bar-button {
+    color: var(--gray-7);
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 150%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &.active {
+      color: var(--blue-6);
+    }
+  }
+}
+
+.credit-button {
+  border-radius: 32px;
+  background-color: var(--green-5);
+
+  font-size: 14px;
+  line-height: 22px;
+  color: var(--white-100);
+
+  padding: 4px 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  cursor: pointer;
+}
+
+.wrapper-mark-drawer-dragger {
+  background: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 0px;
+  width: 100vw;
+  z-index: -1;
+
+  &.active {
+    background: var(--black-100);
+    opacity: 60%;
+    height: 100vh;
+    z-index: 998;
+    touch-action: none;
+  }
+}
+
+.gradient-background1 {
+  background-image: var(--gradient-background1);
+}
+.gradient-background2 {
+  background-image: var(--gradient-background2);
+}
+
+.gradient-bg-hero-card {
+  background-image: var(--gradient-bg-hero-card);
+}
+
+.gradient-background-plan-team {
+  background-image: var(--gradient-background-plan-team);
+}
+
+.gradient-background-plan-individual {
+  background-image: var(--gradient-background-plan-individual);
+}
+
+.gradient-background-plan-free {
+  background-image: var(--gradient-background-plan-free);
+}
+
+.scroll-touch {
+  -webkit-overflow-scrolling: touch;
+}
+
+@keyframes opacity-pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+// .flyin-bottom-to-top {
+//   position: fixed !important;
+//   bottom: 10vh;
+//   left: 50%;
+//   transform: translateX(-50%);
+//   animation: slideUpFadeIn 0.3s ease-out;
+// }
+// /* Custom animation */
+// @keyframes slideUpFadeIn {
+//   from {
+//     transform: translate(-50%, 20px);
+//     opacity: 0;
+//   }
+//   to {
+//     transform: translate(-50%, 0);
+//     opacity: 1;
+//   }
+// }
+.ant-message {
+  top: 16px !important;
+  bottom: auto !important;
+  .ant-message-custom-content {
+    position: relative;
+    gap: 10px;
+
+    span {
+      position: relative;
+      width: 100%;
+    }
+  }
+
+  .ant-message-notice-content {
+    width: calc(100% - 16px);
+  }
+
+  .ant-message-notice-success .ant-message-notice-content {
+    background-color: var(--green-1) !important;
+    border: 1px solid var(--success) !important;
+  }
+
+  .ant-message-notice-error .ant-message-notice-content {
+    background-color: var(--red-1) !important;
+    border: 1px solid var(--error) !important;
+  }
+}
+
+/* Animate messages themselves */
+.ant-message-notice {
+  animation: slideUpFadeIn 0.3s ease-out;
+}
+
+@keyframes slideUpFadeIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.overflow-anywhere {
+  overflow-wrap: anywhere;
+}
